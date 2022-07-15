@@ -9,7 +9,6 @@ import (
 	_ "github.com/golang/mock/mockgen/model"
 )
 
-//go:generate mockgen -destination=../mocks/service/mockWalletService.go -package=service bluelabs/service WalletService
 type WalletService interface{
 	NewWallet(walet dto.NewWalletRequest) (*dto.NewWalletResponse, *errs.AppError)
 	DoTransaction(transactionRequest dto.TransactionRequest) (*dto.TransactionResponse, *errs.AppError)
