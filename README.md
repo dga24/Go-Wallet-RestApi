@@ -2,6 +2,7 @@
  Challenge
 
 
+I made an ApiRest app to implement the exercise
 To run de program have to define SERVER_ADDRESS and SERVER_PORT
 
 
@@ -22,10 +23,10 @@ POST" /wallet/{customer_id:[0-9]+}/wallet/{wallet_id:[0-9]+}
 `json:"wallett_id"`
 `json:"customer_id"`
 `json:"amount"`
-`json:"transaction_type"` // "deposit" || "withdraw"
+`json:"transaction_type"` // "deposit" || "withdrawal"
 
 **To do a transaction, the customer have to be the owner of the wallet (see wallet list in next lines)
-Minim transaction: 10
+Minim amount: 10
 
 
 How this is only a test, this project dont use any DB, insted of this, in the file WalletRepositoryStub you will find a map with 3 example of wallets:
