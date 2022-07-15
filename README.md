@@ -9,6 +9,9 @@ To run de program have to define SERVER_ADDRESS and SERVER_PORT
 Query the current state of a wallet.
 Get Wallet Request
 GET  "/wallet/{wallet_id:[0-9]+}"
+Example:
+GET localhost:8003/wallet/1
+
 
 
 Query to create a wallet.
@@ -17,16 +20,30 @@ POST "/wallet/{customer_id:[0-9]+}/wallet"
 `json:"amount"`
 **Customer_id is a number, you can invent the customerId, or use someon already created. One customer can have more thar one wallet
 
-Queryto add or remove funds from a wallet. 
+Example: 
+POST localhost:8003/wallet/108/wallet
+{
+    "amount": 3000
+}
+
+
+
+Query to add or remove funds from a wallet. 
 Transaction Request
 POST" /wallet/{customer_id:[0-9]+}/wallet/{wallet_id:[0-9]+}
-`json:"wallett_id"`
-`json:"customer_id"`
 `json:"amount"`
 `json:"transaction_type"` // "deposit" || "withdrawal"
-
 **To do a transaction, the customer have to be the owner of the wallet (see wallet list in next lines)
-Minim amount: 10
+**Minim amount: 10
+
+Example:
+POST localhost:8003/wallet/100/wallet/0
+{
+    "amount": 400,
+    "transaction_type": "withdrawal"
+}
+
+
 
 
 How this is only a test, this project dont use any DB, insted of this, in the file WalletRepositoryStub you will find a map with 3 example of wallets:
