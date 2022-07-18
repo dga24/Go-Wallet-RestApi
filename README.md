@@ -1,8 +1,8 @@
 # bluelabs
  Challenge
+by David Garcia
 
-
-I made an ApiRest app to implement the exercise
+I made an ApiRest to implement the exercise
 To run de program have to define SERVER_ADDRESS and SERVER_PORT
 
 
@@ -36,11 +36,12 @@ POST" /wallet/{customer_id:[0-9]+}/wallet/{wallet_id:[0-9]+}
 **To do a transaction, the customer have to be the owner of the wallet (see wallet list in next lines)
 **Minim amount: 10
 
+
 Example:
 POST localhost:8003/wallet/100/wallet/0
 {
-    "amount": 400,
-    "transaction_type": "withdrawal"
+"amount": 400,
+"transaction_type": "withdrawal"
 }
 
 
