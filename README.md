@@ -1,5 +1,4 @@
-# bluelabs
- Challenge
+Wallet Rest Api created for a job application exercise
 by David Garcia
 
 I made an ApiRest to implement the exercise
